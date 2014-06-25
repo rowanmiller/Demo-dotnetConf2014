@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleSalesPublicSite", "CycleSalesPublicSite\CycleSalesPublicSite.csproj", "{F3C4E474-3BB9-4458-BAD4-B912A02BB805}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CycleSalesPublicSite.Test", "CycleSalesPublicSite.Test\CycleSalesPublicSite.Test.csproj", "{F533920C-924A-4D44-92CB-869F8C2BF585}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3C4E474-3BB9-4458-BAD4-B912A02BB805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C4E474-3BB9-4458-BAD4-B912A02BB805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C4E474-3BB9-4458-BAD4-B912A02BB805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C4E474-3BB9-4458-BAD4-B912A02BB805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F533920C-924A-4D44-92CB-869F8C2BF585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F533920C-924A-4D44-92CB-869F8C2BF585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F533920C-924A-4D44-92CB-869F8C2BF585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F533920C-924A-4D44-92CB-869F8C2BF585}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
