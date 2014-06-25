@@ -1,0 +1,1 @@
+if(!(propertyConfiguration is KeyPropertyConfiguration && property.Name == entityType.Name + "_Id"))

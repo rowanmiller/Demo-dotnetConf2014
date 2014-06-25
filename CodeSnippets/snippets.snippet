@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_CreateMockSet</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[var set = new MockDbSet<Bike>()
+                .SetupSeedData(data)
+                .SetupLinq();]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_CreateMockContext</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[var context = new Mock<CycleContext>();
+            context.Setup(c => c.Bikes).Returns(set.Object);]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_ConfigWarrantyInfo</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[builder.Entity<WarrantyInfo>()
+                .Key(w => new { w.BikeModelNo, w.BikeSerialNo })
+                .AzureTableProperties(p =>
+                {
+                    p.PartitionKey(w => w.BikeModelNo);
+                    p.RowKey(w => w.BikeSerialNo);
+                    p.Timestamp("Timestamp", shadowProperty: true);
+                });]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_AddSomeConstructors</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[private bool _useInMemory;
+
+        public CycleSalesContext()
+            : this(false)
+        { }
+
+        public CycleSalesContext(bool useInMemory)
+        {
+            _useInMemory = useInMemory;
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_AddSomeTestData</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[db.Bikes.Add(new Bike { Bike_Id = 1, Retail = 100M });
+                db.Bikes.Add(new Bike { Bike_Id = 2, Retail = 99.95M });
+                db.SaveChanges();]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Shortcut>s_VerifyResults</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="csharp">
+        <![CDATA[Assert.AreEqual(2, results.Length);
+
+                Assert.AreEqual(100M, results[0].USPrice);
+                Assert.AreEqual(200M, results[0].ForeignPrice);
+
+                Assert.AreEqual(99.95M, results[1].USPrice);
+                Assert.AreEqual(199.90M, results[1].ForeignPrice);]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+

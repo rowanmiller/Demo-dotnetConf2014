@@ -1,0 +1,12 @@
+if(navigationProperty.ToEndMember.RelationshipMultiplicity == RelationshipMultiplicity.Many)
+		{
+#>
+        public virtual List<<#= code.Type(navigationProperty.ToEndMember.GetEntityType()) #>> <#= code.Property(navigationProperty) #> { get; set; }
+<#
+		}
+		else
+		{
+#>
+        public virtual <#= code.Type(navigationProperty) #> <#= code.Property(navigationProperty) #> { get; set; }
+<#
+		}
