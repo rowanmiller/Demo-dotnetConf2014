@@ -21,7 +21,7 @@ namespace CycleSalesPublicSite.Controllers
         public ActionResult Index()
         {
             var query = from b in db.Bikes
-                        orderby b.Retail descending
+                        orderby b.Retail
                         select b;
 
             return View(query.ToList());

@@ -6,8 +6,12 @@ namespace CycleSalesInternalApp.WarrantyModel
 {
     class WarrantyContext : DbContext
     {
-        private static readonly string _connection = ConfigurationManager.ConnectionStrings["WarrantyConnection"].ConnectionString;
-
         public DbSet<WarrantyInfo> Warranties { get; set; }
+
+        protected override void OnConfiguring(DbContextOptions options)
+        {
+            var connection = ConfigurationManager.ConnectionStrings["WarrantyConnection"].ConnectionString;
+
+        }
     }
 }

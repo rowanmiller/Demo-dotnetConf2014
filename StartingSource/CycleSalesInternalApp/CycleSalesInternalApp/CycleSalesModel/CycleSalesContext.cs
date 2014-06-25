@@ -14,7 +14,8 @@ namespace CycleSalesInternalApp.CycleSalesModel
 
         protected override void OnConfiguring(DbContextOptions options)
         {
-            options.UseSqlServer(ConfigurationManager.ConnectionStrings["CycleSalesConnection"].ConnectionString);
+            var connection = ConfigurationManager.ConnectionStrings["CycleSalesConnection"].ConnectionString;
+            options.UseSqlServer(connection);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

@@ -1,1 +1,1 @@
-modelBuilder.Conventions.AddFromAssembly(this.GetType().Assembly);
+            modelBuilder.Conventions.AddFromAssembly(this.GetType().Assembly);

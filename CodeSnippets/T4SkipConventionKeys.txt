@@ -1,1 +1,3 @@
-if(!(propertyConfiguration is KeyPropertyConfiguration && property.Name == entityType.Name + "_Id"))
+var shouldSkip = 
+                propertyConfiguration is KeyPropertyConfiguration 
+                && property.Name == entityType.Name + "_Id";

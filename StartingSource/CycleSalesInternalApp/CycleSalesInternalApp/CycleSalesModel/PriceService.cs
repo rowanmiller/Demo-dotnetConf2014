@@ -1,4 +1,5 @@
 ﻿using CycleSalesInternalApp.CycleSalesModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,11 +21,25 @@ namespace CycleSalesInternalApp.CycleSalesModel
                         select new ConversionResult 
                         { 
                             BikeName = b.Name, 
-                            USPrice = b.Retail, 
-                            ForeignPrice = b.Retail * exchangeRate 
+                            USPrice = b.Retail,
+                            ForeignPrice = CalculatePrice(b.Retail, exchangeRate)
                         };
 
             return query.ToList();
+        }
+
+        public static decimal CalculatePrice(decimal price, decimal multiplier)
+        {
+            var unrounded = price * multiplier;
+
+            var roundedToFiveCents = Math.Round(unrounded * 20, 0) / 20;
+
+            if (roundedToFiveCents % 1 == 0)
+            {
+                roundedToFiveCents -= 0.05M;
+            }
+
+            return roundedToFiveCents;
         }
 
         public class ConversionResult
