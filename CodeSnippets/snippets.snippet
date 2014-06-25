@@ -48,11 +48,7 @@
       <Code Language="csharp">
         <![CDATA[private bool _useInMemory;
 
-        public CycleSalesContext()
-            : this(false)
-        { }
-
-        public CycleSalesContext(bool useInMemory)
+        public CycleSalesContext(bool useInMemory = false)
         {
             _useInMemory = useInMemory;
         }]]>

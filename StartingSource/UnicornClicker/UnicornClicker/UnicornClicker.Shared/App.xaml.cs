@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Microsoft.Data.Entity;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -135,3 +136,6 @@ namespace UnicornClicker
         }
     }
 }
+
+// Demo Helper - Allows using to compile before packages are installed
+namespace Microsoft.Data.Entity { }
