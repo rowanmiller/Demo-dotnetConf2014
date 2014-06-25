@@ -19,6 +19,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupWarrantyDetails = new System.Windows.Forms.GroupBox();
+            this.labelInfo = new System.Windows.Forms.Label();
             this.buttonSave = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.textModelNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textSerialNo = new System.Windows.Forms.TextBox();
-            this.labelInfo = new System.Windows.Forms.Label();
             this.groupWarrantyDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warrantyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -64,6 +64,16 @@
             this.groupWarrantyDetails.TabIndex = 22;
             this.groupWarrantyDetails.TabStop = false;
             this.groupWarrantyDetails.Text = "Warranty Details";
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfo.Location = new System.Drawing.Point(9, 28);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(51, 20);
+            this.labelInfo.TabIndex = 23;
+            this.labelInfo.Text = "label9";
             // 
             // buttonSave
             // 
@@ -206,7 +216,6 @@
             this.textModelNo.Name = "textModelNo";
             this.textModelNo.Size = new System.Drawing.Size(231, 29);
             this.textModelNo.TabIndex = 19;
-            this.textModelNo.Text = "TTT200";
             // 
             // label1
             // 
@@ -225,17 +234,6 @@
             this.textSerialNo.Name = "textSerialNo";
             this.textSerialNo.Size = new System.Drawing.Size(231, 29);
             this.textSerialNo.TabIndex = 17;
-            this.textSerialNo.Text = "FR12789";
-            // 
-            // labelInfo
-            // 
-            this.labelInfo.AutoSize = true;
-            this.labelInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfo.Location = new System.Drawing.Point(9, 28);
-            this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(51, 20);
-            this.labelInfo.TabIndex = 23;
-            this.labelInfo.Text = "label9";
             // 
             // WarrantyForm
             // 
